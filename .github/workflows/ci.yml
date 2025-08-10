@@ -5,6 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      custom_message:
+        description: "Custom message to display"
+        required: false
+        default: "🚀 Hello from GitHub Actions!"
 
 jobs:
   build:
