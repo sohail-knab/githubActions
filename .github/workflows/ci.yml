@@ -1,11 +1,15 @@
-name: Hello world workflow
-
-on: [push]
-
-jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello from github actions for me1"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java (optional - only if you use Java)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Run a hello world script
+        run: echo "🚀 Hello from GitHub Actions!"
