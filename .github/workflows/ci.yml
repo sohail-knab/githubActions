@@ -2,10 +2,10 @@ name: Hello world workflow
 
 on: [push]
 
-jobs: 
-  say-hello
-  runs-on: ubuntu-latest
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: Say Hello
-  - run: echo "hello world from github actions."
+    steps:
+      - name: Say Hello
+        run: echo "Hello from github actions for me1"
