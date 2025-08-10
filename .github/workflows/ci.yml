@@ -22,6 +22,3 @@ jobs:
 
       - name: Run a hello world script
         run: echo "🚀 Hello from GitHub Actions!"
-
-      - name: Build with Maven
-        run: mvn clean install
